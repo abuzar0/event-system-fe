@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --bs-body-bg: #fff;
+  --bs-body-color: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+}
+
+body.dark {
+  --bs-body-bg: #212529;
+  --bs-body-color: #f8f9fa;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #343a40;
+  --bs-dark: #f8f9fa;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+.card {
+  background-color: var(--bs-light);
+  color: var(--bs-body-color);
+}
+
+.table {
+  color: var(--bs-body-color);
+}
+
+.dark .table {
+  --bs-table-color: var(--bs-body-color);
+  --bs-table-bg: var(--bs-body-bg);
+  --bs-table-border-color: var(--bs-border-color);
+  color: var(--bs-body-color);
+}
+
+.dark .card {
+  background-color: var(--bs-light);
+}
+
+.dark .form-control,
+.dark .form-select {
+  background-color: var(--bs-dark);
+  color: var(--bs-body-color);
+  border-color: var(--bs-secondary);
+}
+
+.dark .btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.dark .btn-outline-primary:hover {
+  color: var(--bs-dark);
+  background-color: var(--bs-primary);
+}
+
+/* Dark mode styles for table */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-color-type: var(--bs-table-striped-color);
+  --bs-table-bg-type: var(--bs-table-striped-bg);
+}
+
+.dark .table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-striped-color: rgba(255, 255, 255, 0.8);
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+}
+
+.dark .table-striped > tbody > tr:nth-of-type(even) > * {
+  --bs-table-striped-color: var(--bs-body-color);
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.01);
+}
+
+.dark .table-hover > tbody > tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
